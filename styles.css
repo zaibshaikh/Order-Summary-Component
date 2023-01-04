@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 :root {
   --white: #fff;
@@ -7,32 +12,19 @@
   --Very-pale-blue: hsl(225, 100%, 98%);
   --Desaturated-blue: hsl(224, 23%, 55%);
   --Dark-blue: hsl(223, 47%, 23%);
-
   --font: "Red Hat Display", sans-serif;
 }
 
 html {
+  height: 100%;
+  width: 100%;
   overflow: hidden;
-  max-width: 1440px;
-  margin: auto;
   background-color: var(--Pale-blue);
 }
 
-.header-logo {
-  /* background-color: var(--white); */
-  width: 100vw;
-  min-width: 100%;
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-}
-
-.header-logo img {
-  padding: 20px;
-}
-
 body {
+  height: 100%;
+  width: 100%;
   display: grid;
   place-items: center;
 }
@@ -42,7 +34,6 @@ body {
   height: 700px;
   background-color: var(--white);
   border-radius: 20px;
-  box-shadow: #fff;
   overflow: hidden;
 }
 
@@ -105,8 +96,54 @@ body {
   font-weight: 700;
 }
 
+.change-text:hover {
+  color: var(--Dark-blue);
+}
+
 .annual-para {
   color: var(--Desaturated-blue);
+}
+
+.proceed-button {
+  width: 355px;
+  height: 50px;
+  background-color: var(--Bright-blue);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--Very-pale-blue);
+  cursor: pointer;
+}
+
+.proceed-button:hover {
+  background-color: var(--Pale-blue);
+  transition: background-color 0.2s ease;
+}
+
+.cancel-button {
+  width: 355px;
+  height: 50px;
+  margin: 25px auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: auto; */
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--Desaturated-blue);
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  color: var(--Dark-blue);
+  transition: color 0.2s ease;
 }
 
 .footer-text {
@@ -117,4 +154,59 @@ body {
   position: absolute;
   text-align: center;
   font-family: var(--font);
+}
+
+@media only screen and (max-width: 600px) {
+  .image-hero {
+    width: 350px;
+  }
+  .card-component {
+    width: 350px;
+    height: fit-content;
+  }
+
+  .text-head {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--Dark-blue);
+  }
+
+  .text-holder {
+    padding: 25px;
+  }
+
+  .text-para {
+    color: var(--Desaturated-blue);
+    font-size: 1rem;
+  }
+
+  .annual-bar {
+    width: 280px;
+    height: 85px;
+  }
+
+  .proceed-button {
+    width: 280px;
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  .cancel-button {
+    width: 280px;
+    height: 50px;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .annual-items {
+    display: flex;
+    flex-direction: row;
+    margin-left: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .change-text {
+    margin-left: 30px;
+  }
 }
